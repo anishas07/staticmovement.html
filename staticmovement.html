@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> STATIC METHOD JAVASCRIPT </h1>
+    <p id="Welcome"></p>
+    <p id="Home"></p>
+    <p id="Friend"></p>
+
+    <script> 
+class student {
+    constructor(name) {
+        this.studentname= name;
+    }
+    static Welcome() {
+        return "Welcome";
+    }
+    static Home(a) {
+        return "Home " + a.studentname;
+    }
+    hi() {
+        return "Friend " +this.studentname;
+    }
+}
+
+myname = new student("Anisha");
+    document.getElementById("Welcome").innerHTML = student.Welcome(); 
+    document.getElementById("Home").innerHTML = student.Home(myname); 
+    document.getElementById("Friend").innerHTML = myname.hi();      
+
+
+    </script>
+</body>
+</html>
